@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/slick.css" type="text/css" /> 
     <link rel="stylesheet" href="css/templatemo-style.css">
     <style>
-        /* Video full screen fix */
+        /* Video full screen fix - iOS y Android compatible */
         #bg-video {
             position: fixed;
             top: 0;
@@ -19,6 +19,14 @@
             height: 100%;
             object-fit: cover;
             z-index: -100;
+        }
+
+        /* Fallback para Android antiguos */
+        @supports not (object-fit: cover) {
+            #bg-video {
+                width: auto;
+                height: 100%;
+            }
         }
 
         html, body {
@@ -355,11 +363,19 @@
                 max-height: calc(100vh - 120px);
             }
         }
+        
+        /* Ocultar controles nativos del video en algunos navegadores Android */
+        video::-webkit-media-controls {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
-    <video autoplay muted loop id="bg-video">
+    <!-- VIDEO OPTIMIZADO PARA iOS Y ANDROID -->
+    <video autoplay muted loop playsinline id="bg-video" disableRemotePlayback>
         <source src="video/medvolution.mp4" type="video/mp4">
+        <!-- Mensaje de fallback si el video no carga -->
+        Tu navegador no soporta videos HTML5.
     </video>
     <div class="page-container">
       <div class="container-fluid">
@@ -529,5 +545,45 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/templatemo-script.js"></script>
+  
+  <!-- Script optimizado para iOS y Android -->
+  <script>
+    (function() {
+        var video = document.getElementById('bg-video');
+        
+        if (!video) return;
+        
+        // Función para intentar reproducir el video
+        function startVideo() {
+            video.play().then(function() {
+                console.log('Video reproduciéndose correctamente');
+            }).catch(function(error) {
+                console.log('Auto-reproducción bloqueada:', error);
+                // Esperar interacción del usuario
+                var playOnInteraction = function() {
+                    video.play();
+                    document.removeEventListener('touchstart', playOnInteraction);
+                    document.removeEventListener('click', playOnInteraction);
+                };
+                document.addEventListener('touchstart', playOnInteraction, { once: true });
+                document.addEventListener('click', playOnInteraction, { once: true });
+            });
+        }
+        
+        // Asegurar que el video esté listo antes de intentar reproducir
+        if (video.readyState >= 2) {
+            startVideo();
+        } else {
+            video.addEventListener('loadeddata', startVideo);
+        }
+        
+        // Recuperar reproducción si la página se vuelve visible (Android)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden && video.paused) {
+                startVideo();
+            }
+        });
+    })();
+  </script>
 </body>
 </html>
