@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Medvolution</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -42,18 +42,18 @@
             padding-bottom: 0 !important;
         }
 
-        /* Home centered text */
+        /* Home centered text - responsive */
         .intro-container {
             display: block !important;
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 15px;
         }
 
         .intro-left {
             margin: 0 auto;
             max-width: 800px;
             width: 100%;
-            padding: 40px;
+            padding: 25px 20px;
         }
 
         .intro-right {
@@ -66,7 +66,7 @@
         }
 
         .content-pad {
-            padding: 40px 30px;
+            padding: 30px 20px;
         }
 
         .gallery-slider {
@@ -90,13 +90,13 @@
 
         /* Social links styling */
         .social-links {
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .social-links a {
             display: inline-block;
-            margin: 10px 15px;
+            margin: 8px 12px;
             color: #99FF66;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -108,14 +108,15 @@
             text-align: center;
         }
         
-        /* Footer smaller text */
+        /* Footer smaller text - responsive */
         .tm-footer {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             text-align: right;
             justify-content: flex-end;
+            padding: 15px;
         }
         
-        /* Contact page layout - centrado */
+        /* Contact page layout - centrado responsive */
         .contact-wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -124,10 +125,10 @@
         }
         .contact-social {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
             max-width: 500px;
             text-align: center;
-            padding: 40px;
+            padding: 30px 20px;
             margin: 0 auto;
             border-radius: 10px;
         }
@@ -137,42 +138,222 @@
         }
         .contact-link a {
             color: #99FF66;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-decoration: none;
             border: 1px solid #99FF66;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 30px;
             transition: all 0.3s ease;
+            display: inline-block;
         }
         .contact-link a:hover {
             background-color: #99FF66;
             color: #333;
         }
         
-        @media (max-width: 768px) {
-            .contact-wrapper {
-                flex-direction: column;
-                align-items: center;
-            }
-            .tm-footer {
-                text-align: center;
-                justify-content: center;
-            }
-        }
-        
-        /* Gallery tooltip/caption styling */
+        /* Gallery tooltip/caption styling - responsive */
         .effect-julia figcaption div p {
-            font-size: 12px;
-            line-height: 1.4;
+            font-size: 10px;
+            line-height: 1.3;
             background: rgba(0,0,0,0.8);
             color: white;
-            padding: 8px;
+            padding: 6px;
             margin: 2px 0;
         }
         
         /* Ajuste para el tooltip de ORION */
         .effect-julia figcaption div p strong {
             color: #99FF66;
+        }
+        
+        /* ========== RESPONSIVE MEDIA QUERIES ========== */
+        
+        /* Tablets y pantallas medianas */
+        @media (max-width: 992px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .navbar .navbar-nav .nav-item .nav-link {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+            
+            .page-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        
+        /* Móviles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            h4 {
+                font-size: 1.1rem;
+            }
+            
+            .intro-left {
+                padding: 20px 15px;
+            }
+            
+            .intro-left p {
+                font-size: 14px;
+                text-align: justify;
+            }
+            
+            .content-pad {
+                padding: 20px 15px;
+            }
+            
+            .tm-bg-dark {
+                background-color: rgba(0,0,0,0.5);
+            }
+            
+            /* Menú responsive mejorado */
+            .navbar-collapse {
+                background: rgba(0, 0, 0, 0.95);
+                border-radius: 10px;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            
+            .navbar .navbar-nav .nav-item {
+                margin: 5px 0;
+                text-align: center;
+            }
+            
+            .navbar .navbar-nav .nav-item .nav-link {
+                font-size: 1rem;
+                padding: 8px 15px;
+                display: inline-block;
+            }
+            
+            /* Contacto móvil */
+            .contact-social {
+                padding: 20px 15px;
+                margin: 10px;
+                width: calc(100% - 20px);
+            }
+            
+            .social-links a {
+                font-size: 1rem;
+                margin: 5px 10px;
+            }
+            
+            /* Footer móvil */
+            .tm-footer {
+                text-align: center;
+                justify-content: center;
+                font-size: 0.65rem;
+            }
+            
+            .tm-footer .col-md-12 {
+                text-align: center !important;
+            }
+            
+            /* Ajustes del slider de galería en móvil */
+            .gallery-slider .slick-list {
+                padding: 0 10px;
+            }
+            
+            .gallery-slider figure {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            
+            .gallery-slider figure img {
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Botón del menú hamburguesa */
+            .navbar-toggler {
+                padding: 8px 12px;
+            }
+            
+            .navbar-toggler-icon {
+                width: 1.2em;
+                height: 1.2em;
+            }
+            
+            /* Separación entre secciones */
+            .cd-hero-slider {
+                padding: 5px 0;
+            }
+            
+            .py-5 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+        }
+        
+        /* Móviles muy pequeños */
+        @media (max-width: 480px) {
+            body {
+                font-size: 13px;
+            }
+            
+            .intro-left {
+                padding: 15px 12px;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            h4 {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-link a {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            
+            .effect-julia figcaption div p {
+                font-size: 8px;
+                padding: 4px;
+            }
+        }
+        
+        /* Ajuste para orientación horizontal en móviles */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .intro-left {
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+            
+            .gallery-slider figure {
+                max-width: 240px;
+            }
+        }
+        
+        /* Mejora de scroll en contenedores */
+        .tm-content-container {
+            overflow-y: auto;
+            max-height: calc(100vh - 150px);
+        }
+        
+        @media (max-width: 768px) {
+            .tm-content-container {
+                max-height: calc(100vh - 120px);
+            }
         }
     </style>
 </head>
@@ -314,15 +495,15 @@
                     </p>
                   </div>
                   <div class="mt-4">
-                    <p style="font-size: 0.9rem;">¡Síguenos y sé parte de la conversación!</p>
+                    <p style="font-size: 0.85rem;">¡Síguenos y sé parte de la conversación!</p>
                   </div>
                   
                   <!-- Línea divisoria -->
-                  <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0;">
+                  <hr style="border-color: rgba(255,255,255,0.2); margin: 25px 0;">
                   
                   <!-- Enlace al formulario de contacto -->
                   <div class="contact-link">
-                    <h4 style="margin-bottom: 15px;">Formulario de contacto</h4>
+                    <h4 style="margin-bottom: 12px; font-size: 1.2rem;">Formulario de contacto</h4>
                     <a href="https://forms.gle/btUbXLFNJ2eVm7q6A" target="_blank">Haz clic aquí para contactarnos</a>
                   </div>
                 </div>
