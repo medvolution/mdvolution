@@ -1,387 +1,352 @@
-<!DOCTYPE HTML>
-<!--
-	
--->
-<html>
-	<head>
-		<title>Medvolution</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medvolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css" /> 
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <style>
+        /* Video full screen fix */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -100;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-snowflake"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>
-                    <img src="medvolution_logo.jpg" alt="Dimension Logo" class="logo-img">
-                </h1>
-								<p>Bienvenido al proyecto de Salud Ocupacional más grande de México<br />
-								"Legio invicta per unitatem"
-<p style="text-align:center; font-size: 0.7em; margin-top: 0px; margin-bottom: 0px;">Escucha nuestro Podcast</p>
-<iframe src="https://open.spotify.com/embed/show/6wM9JmUpluC21JA53MKTck?utm_source=generator&theme=0&t=0" loading="lazy"></iframe>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#historia">Historia</a></li>
-								<li><a href="#legion">Legión</a></li>
-								<li><a href="#contact">Contacto</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+        /* Hide all decorative circles */
+        .circle {
+            display: none;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        /* Remove white border lines */
+        .tm-border-top,
+        .tm-border-bottom {
+            border-top: none !important;
+            border-bottom: none !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Introducción</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p style="line-height: 2;">
-  <strong style="font-size: 2em;">¿Qué es Medvolution?</strong><br /> 
-  Somos un grupo de especialistas en Salud Ocupacional (S.O.) que, a través de una iniciativa colaborativa, impulsamos la mejora continua en este ámbito mediante un enfoque multidisciplinario.<br /><br />
+        /* Home centered text */
+        .intro-container {
+            display: block !important;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-  <strong style="font-size: 2em;">Disciplinas</strong><br />
-  Médicos, enfermeros, ingenieros, químicos, psicólogos, recursos humanos, empresarios, paramédicos son algunas de las profesiones que participan en nuestro proyecto.<br /><br />
-  Descarga y comparte nuestra infografía<br />
-  <a href="https://drive.google.com/file/d/1vPmRSL06ublISHR-ixTsrd2sfdj0omV7/view?usp=sharing">"Infografía Medvolution"</a>
-</p>
+        .intro-left {
+            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
 
-															</article>
+        .intro-right {
+            display: none;
+        }
 
-						<!-- Historia -->
-							<article id="historia">
-								<h2 class="major">Historia</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+        .page-left {
+            margin: 0 auto;
+            max-width: 900px;
+        }
 
-								<p> 
-  Comenzó en Monterrey , Nuevo Léon (México), como una iniciativa universitaria de alumnos cursando la
-  especialidad en S.O (2017) , evolucionando posteriormente en este gran proyecto a manera de colectivo.<br /><br />
+        .content-pad {
+            padding: 40px 30px;
+        }
 
-  <strong style="font-size: 2em;">Valores</strong><br />
-  Colaboramos en equipo en un ambiente de confianza y respeto.<br />
- <br />
-  <strong style="font-size: 2em;">Presencia</strong><br />
-  Conformamos una red profesional en varios estados de México y en el extranjero.<br /><br /></p>
-							</article>
+        .gallery-slider {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
 
-						<!-- Legión -->
-							<article id="legion">
-								<h2 class="major">Legión</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Legión Ocupacional es un programa conformado por expertos en Salud Ocupacional, que colaboran de manera voluntaria en Medvolution.<br />
+        /* Gallery - make images clickable */
+        .effect-julia {
+            cursor: pointer;
+        }
+        .effect-julia figcaption a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            text-indent: -9999px;
+        }
 
-Esta iniciativa reúne a especialistas en la materia, comprometidos con la resolución de dudas, el análisis de normativas y el intercambio de conocimientos con profesionales de distintos niveles, desde principiantes hasta expertos consolidados.<br />
-
-El programa es totalmente gratuito y no genera compromisos, operando de manera voluntaria según la disponibilidad de sus miembros.<br />
-
-Nuestra principal vía de comunicación es a través de redes sociales, incluyendo grupos de WhatsApp, Telegram y Facebook.<br />
-
-¿Te gustaría compartir tu experiencia con otros profesionales en Salud Ocupacional? Visita nuestra sección de contacto para más información.</p>
-							</article>
-
-<!-- Contact -->
-<article id="contact">
-    <h2 class="major">Contacto</h2>
-    <!-- Container to center the form -->
-    <div style="display: flex; justify-content: center; align-items: center; height: 40vh; margin: 0; padding: 0;">
-    <form
-  action="https://formspree.io/f/mdkaqzrn"
-  method="POST"
->
-  <label>
-    Correo electrónico:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Mensaje:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Enviar</button>
-</form>    </div>
-
-
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/company/medvolution/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://www.facebook.com/share/g/15AHAesdr4/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.twitch.tv/medvolution" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
-									<li><a href="https://t.me/medvolution_bot?start=67ceb3129e0492b5820007d3" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/company/medvolution/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-										<li><a href="https://www.facebook.com/share/g/15AHAesdr4/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.twitch.tv/medvolution" class="icon brands fa-twitch"><span class="label">Twitch</span></a></li>
-										<li><a href="https://t.me/medvolution_bot?start=67ceb3129e0492b5820007d3" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Medvolution 2025</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        /* Social links styling */
+        .social-links {
+            margin-top: 30px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 10px 15px;
+            color: #99FF66;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #3CF;
+            transform: scale(1.05);
+        }
+        .contact-info {
+            text-align: center;
+        }
+        
+        /* Footer smaller text */
+        .tm-footer {
+            font-size: 0.8rem;
+            text-align: right;
+            justify-content: flex-end;
+        }
+        
+        /* Contact page layout - centrado */
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        .contact-social {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+            padding: 40px;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .contact-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .contact-link a {
+            color: #99FF66;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border: 1px solid #99FF66;
+            padding: 12px 24px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .contact-link a:hover {
+            background-color: #99FF66;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tm-footer {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+        
+        /* Gallery tooltip/caption styling */
+        .effect-julia figcaption div p {
+            font-size: 12px;
+            line-height: 1.4;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 8px;
+            margin: 2px 0;
+        }
+        
+        /* Ajuste para el tooltip de ORION */
+        .effect-julia figcaption div p strong {
+            color: #99FF66;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/medvolution.mp4" type="video/mp4">
+    </video>
+    <div class="page-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cd-slider-nav">
+              <nav class="navbar navbar-expand-lg" id="tm-nav">
+                <a class="navbar-brand" href="#"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-supported-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbar-supported-content">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                      <li class="nav-item selected">
+                        <a class="nav-link" aria-current="page" href="#0" data-no="1">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#0" data-no="2">Proyectos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#0" data-no="3">Legión</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#0" data-no="4">Contacto</a>
+                      </li>
+                    </ul>
+                  </div>
+              </nav>
+            </div>
+          </div>          
+        </div>        
+      </div>      
+      <div class="container-fluid tm-content-container">
+        <ul class="cd-hero-slider mb-0 py-5">
+          <!-- Home - Texto centrado -->
+          <li class="px-3" data-page-no="1">
+            <div class="page-width-1" style="margin: 0 auto;">
+              <div class="intro-container">
+                <div class="intro-left tm-bg-dark" style="margin: 0 auto;">
+                  <h2 class="mb-4">Bienvenido a Medvolution</h2>
+                  
+                  <h4 class="mb-3">¿Qué es Medvolution?</h4>
+                  <p class="mb-4">
+                    Somos un grupo de especialistas en Salud Ocupacional (S.O.) que, a través de una iniciativa colaborativa, impulsamos la mejora continua en este ámbito mediante un enfoque multidisciplinario.
+                  </p>
+                  
+                  <h4 class="mb-3">Disciplinas</h4>
+                  <p class="mb-4">
+                    Médicos, enfermeros, ingenieros, químicos, psicólogos, recursos humanos, empresarios, paramédicos son algunas de las profesiones que participan en nuestro proyecto.
+                  </p>
+                  
+                  <h4 class="mb-3">Descarga y comparte nuestra infografía</h4>
+                  <p class="mb-0">
+                    <a href="https://drive.google.com/file/d/1vPmRSL06ublISHR-ixTsrd2sfdj0omV7/view" target="_blank" style="color: #99FF66; font-weight: bold;">"Infografía Medvolution"</a>
+                  </p>
+                </div>
+              </div>
+            </div>            
+          </li>
+          
+          <!-- Proyectos - 2 imágenes -->
+          <li data-page-no="2">
+            <div class="mx-auto position-relative gallery-container">
+              <div class="mx-auto gallery-slider">
+                <!-- Imagen 1: ORION - tooltip con información -->
+                <figure class="effect-julia item">
+                    <img src="img/gallery-img-01.jpg" alt="ORION Project">
+                    <figcaption>
+                        <div>
+                            <p><strong>Project name:</strong> Occupational Risk Intelligence & Operational Navigation (ORION)</p>
+                            <p><strong>Tagline:</strong> Advanced Multi-Hazard Risk Intelligence Web-app for Smarter Decisions</p>
+                            <p><strong>Consolidated version:</strong> V1.0.1</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <!-- Imagen 2: Medvolution Podcast - clickeable a Spotify -->
+                <figure class="effect-julia item" onclick="window.open('https://open.spotify.com/show/6wM9JmUpluC21JA53MKTck', '_blank')">
+                    <img src="img/gallery-img-02.jpg" alt="Medvolution Podcast">
+                    <figcaption>
+                        <div>
+                            <p>Medvolution es un podcast dedicado a narrar esos pequeños cambios de la Salud Ocupacional y Laboral dentro de México y el mundo.</p>
+                        </div>
+                    </figcaption>
+                </figure>
+              </div>
+            </div>
+          </li>
+          
+          <!-- Legión (antes About) -->
+          <li data-page-no="3" class="px-3">
+            <div class="position-relative page-width-1 page-right">
+              <div class="tm-bg-dark content-pad">
+                <h2 class="mb-4">Legión Ocupacional</h2>
+                <p class="mb-4">
+                  Legión Ocupacional es un programa conformado por expertos en Salud Ocupacional, que colaboran de manera voluntaria en Medvolution.
+                </p>
+                <p class="mb-4">
+                  Esta iniciativa reúne a especialistas en la materia, comprometidos con la resolución de dudas, el análisis de normativas y el intercambio de conocimientos con profesionales de distintos niveles, desde principiantes hasta expertos consolidados.
+                </p>
+                <p class="mb-4">
+                  El programa es totalmente gratuito y no genera compromisos, operando de manera voluntaria según la disponibilidad de sus miembros.
+                </p>
+                <p class="mb-4">
+                  Nuestra principal vía de comunicación es a través de redes sociales, incluyendo grupos de WhatsApp, Telegram y Facebook.
+                </p>
+                <p class="mb-0">
+                  ¿Te gustaría compartir tu experiencia con otros profesionales en Salud Ocupacional? Visita nuestra sección de contacto para más información.
+                </p>
+              </div>              
+            </div>
+          </li>
+          
+          <!-- Contacto - Centrado con redes sociales y enlace a formulario -->
+          <li data-page-no="4">
+            <div class="mx-auto page-width-2">
+              <div class="row">
+                <div class="col-md-12 me-0 ms-auto">
+                  <h2 class="mb-4 text-center">Contacto</h2>
+                </div>
+              </div>
+              <div class="contact-wrapper">
+                <div class="contact-social tm-bg-dark">
+                  <h3 class="mb-4">Redes Sociales</h3>
+                  <div class="social-links">
+                    <p>
+                      <a href="https://www.linkedin.com/company/medvolution/" target="_blank">LinkedIn</a>
+                    </p>
+                    <p>
+                      <a href="https://www.facebook.com/share/g/15AHAesdr4/" target="_blank">Facebook</a>
+                    </p>
+                    <p>
+                      <a href="https://t.me/medvolution_bot?start=67ceb3129e0492b5820007d3" target="_blank">Telegram</a>
+                    </p>
+                  </div>
+                  <div class="mt-4">
+                    <p style="font-size: 0.9rem;">¡Síguenos y sé parte de la conversación!</p>
+                  </div>
+                  
+                  <!-- Línea divisoria -->
+                  <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0;">
+                  
+                  <!-- Enlace al formulario de contacto -->
+                  <div class="contact-link">
+                    <h4 style="margin-bottom: 15px;">Formulario de contacto</h4>
+                    <a href="https://forms.gle/btUbXLFNJ2eVm7q6A" target="_blank">Haz clic aquí para contactarnos</a>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+      <footer class="row mx-auto tm-footer">
+        <div class="col-md-12 px-0" style="text-align: right;">
+          Copyright 2026 Medvolution. All rights reserved.
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="loader-wrapper">            
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>  
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/templatemo-script.js"></script>
+</body>
 </html>
