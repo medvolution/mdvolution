@@ -182,8 +182,10 @@ a:focus-visible {
 .hydra-hero__logo {
     display: block;
     width: min(560px, 88vw);
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
+    object-fit: contain;
 }
 
 /* Small flag next to language links */
