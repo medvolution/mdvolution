@@ -191,7 +191,14 @@ h2 {
     max-width: 505px;
 }
 
+/* The content block keeps its full height, so a short window scrolls it
+   instead of letting the footer overlap the last section. */
+.tm-content-container {
+    flex-shrink: 0;
+}
+
 .tm-footer {
+    margin-top: 4rem;
     padding-top: 25px;
     padding-bottom: 25px;
     width: 100%;
