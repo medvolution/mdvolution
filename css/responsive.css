@@ -156,3 +156,16 @@ button:focus-visible {
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
+
+/* Home page (ES/EN): the hero slider item added 16px padding on each side and the
+   inner page-width block narrowed the content again. On phones use the full width. */
+@media (max-width: 767px) {
+    .cd-hero-slider > li.px-3 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .cd-hero-slider .page-width-1 {
+        max-width: 100%;
+        width: 100%;
+    }
+}
