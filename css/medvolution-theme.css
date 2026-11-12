@@ -131,6 +131,14 @@ h2 {
     }
 }
 
+/* Desktop widths: narrower link padding so the language link and HYDRA both
+   fit in the navbar. Below 993px the menu is collapsed and is not affected. */
+@media (min-width: 993px) and (max-width: 1440px) {
+    .navbar .navbar-nav .nav-item .nav-link {
+        padding: 15px 30px;
+    }
+}
+
 @media (max-width: 992px) {
     .navbar {
         margin-top: 0;
