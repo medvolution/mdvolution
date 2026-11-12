@@ -97,3 +97,11 @@ body {
         transition: none;
     }
 }
+
+/* Wordmark on the language selector */
+.lang-landing__brand img {
+    width: min(420px, 80vw);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

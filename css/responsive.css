@@ -129,3 +129,9 @@ button:focus-visible {
         overflow-y: auto;
     }
 }
+
+/* Brand wordmark (Medvolution) */
+.navbar-brand img {
+    height: clamp(28px, 3vw, 44px);
+    width: auto;
+}

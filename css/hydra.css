@@ -171,3 +171,9 @@ a:focus-visible {
         transition: none;
     }
 }
+
+/* Brand wordmark in header */
+.hydra-top img {
+    height: clamp(28px, 3vw, 36px);
+    width: auto;
+}
