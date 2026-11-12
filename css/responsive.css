@@ -1,0 +1,131 @@
+/*
+ * Responsive layer (mobile-first)
+ * Breakpoints: 480, 768, 1024, 1280, 1920, 2560 px
+ */
+
+:root {
+    --site-nav-height: 64px;
+    --site-gutter: clamp(12px, 2.5vw, 40px);
+    --site-max-width: 1200px;
+    --site-max-width-wide: 1440px;
+    --site-touch-target: 44px;
+    --site-text-base: clamp(14px, 0.9vw + 0.5rem, 18px);
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-size: var(--site-text-base);
+    background-color: #0b0b0b;
+    overflow-x: hidden;
+    min-height: 100dvh;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Full-height container with fallback for browsers without dvh */
+.tm-content-container {
+    max-height: none;
+    min-height: calc(100vh - var(--site-nav-height));
+    min-height: calc(100dvh - var(--site-nav-height));
+    overflow-y: visible;
+}
+
+/* Background video: hidden on small screens, reduced motion and slow connections */
+@media (max-width: 767px) {
+    #bg-video {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #bg-video {
+        display: none;
+    }
+}
+
+/* Touch targets and focus visibility */
+.navbar .navbar-nav .nav-item .nav-link,
+.social-links a,
+.contact-link a {
+    min-height: var(--site-touch-target);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:focus-visible,
+[data-href]:focus-visible,
+button:focus-visible {
+    outline: 3px solid #99FF66;
+    outline-offset: 3px;
+}
+
+/* Content width: comfortable reading on wide screens */
+.intro-left,
+.page-left,
+.page-right,
+.contact-wrapper {
+    max-width: var(--site-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Gallery images scale with the viewport */
+.gallery-slider figure img {
+    width: 100%;
+    height: auto;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .content-pad,
+    .intro-left {
+        padding: clamp(20px, 3vw, 40px);
+    }
+}
+
+/* Laptops 16:9 (1280x720 to 1366x768) */
+@media (min-width: 1024px) {
+    .tm-content-container {
+        padding-left: var(--site-gutter);
+        padding-right: var(--site-gutter);
+    }
+}
+
+/* Large desktop 16:9 (1920x1080) */
+@media (min-width: 1920px) {
+    :root {
+        --site-text-base: 20px;
+        --site-max-width: var(--site-max-width-wide);
+    }
+}
+
+/* Very large screens (2560x1440 and 4K) */
+@media (min-width: 2560px) {
+    :root {
+        --site-text-base: 24px;
+        --site-max-width: 1600px;
+    }
+
+    .tm-footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Short viewports (landscape phones, small laptops) */
+@media (max-height: 500px) and (orientation: landscape) {
+    .navbar-collapse {
+        max-height: 70dvh;
+        overflow-y: auto;
+    }
+}
