@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Medvolution | Home</title>
@@ -15,12 +16,11 @@
     <link rel="stylesheet" href="../css/templatemo-style.css">
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/inline.css">
 </head>
 <body>
-    <video autoplay muted loop playsinline id="bg-video" disableRemotePlayback>
-        <source src="../video/medvolution.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
+    <div class="site-bg" aria-hidden="true"></div>
     <div class="page-container">
       <div class="container-fluid">
         <div class="row">
@@ -61,9 +61,9 @@
       <div class="container-fluid tm-content-container">
         <ul class="cd-hero-slider mb-0 py-5">
           <li class="px-3" data-page-no="1">
-            <div class="page-width-1" style="margin: 0 auto;">
+            <div class="page-width-1 u-center-auto">
               <div class="intro-container">
-                <div class="intro-left tm-bg-dark" style="margin: 0 auto;">
+                <div class="intro-left tm-bg-dark u-center-auto">
                   <h2 class="mb-4">Welcome to Medvolution</h2>
                   <h4 class="mb-3">What is Medvolution?</h4>
                   <p class="mb-4">
@@ -75,7 +75,7 @@
                   </p>
                   <h4 class="mb-3">Download and share our infographic</h4>
                   <p class="mb-0">
-                    <a href="https://drive.google.com/file/d/1vPmRSL06ublISHR-ixTsrd2sfdj0omV7/view" target="_blank" rel="noopener noreferrer" style="color: #99FF66; font-weight: bold;">"Medvolution Infographic"</a>
+                    <a href="https://drive.google.com/file/d/1vPmRSL06ublISHR-ixTsrd2sfdj0omV7/view" target="_blank" rel="noopener noreferrer" class="u-link-accent">"Medvolution Infographic"</a>
                   </p>
                 </div>
               </div>
@@ -146,11 +146,11 @@
                     <p><a href="https://t.me/medvolution_bot?start=67ceb3129e0492b5820007d3" target="_blank" rel="noopener noreferrer">Telegram</a></p>
                   </div>
                   <div class="mt-4">
-                    <p style="font-size: 0.85rem;">Follow us and be part of the conversation!</p>
+                    <p class="u-text-sm">Follow us and be part of the conversation!</p>
                   </div>
-                  <hr style="border-color: rgba(255,255,255,0.2); margin: 25px 0;">
+                  <hr class="u-divider-soft">
                   <div class="contact-link">
-                    <h4 style="margin-bottom: 12px; font-size: 1.2rem;">Contact form</h4>
+                    <h4 class="u-heading-sm">Contact form</h4>
                     <p>[PENDING: English contact form link]</p>
                   </div>
                 </div>
@@ -161,7 +161,7 @@
     </div>
     <div class="container-fluid">
       <footer class="row mx-auto tm-footer">
-        <div class="col-md-12 px-0" style="text-align: right;">
+        <div class="col-md-12 px-0 u-text-right">
           Copyright 2026 Medvolution. All rights reserved.
         </div>
       </footer>

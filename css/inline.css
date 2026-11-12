@@ -1,0 +1,8 @@
+/* Classes moved from inline style attributes (keeps CSP free of style-src unsafe-inline) */
+.u-divider-soft { border-color: rgba(255,255,255,0.2); margin: 25px 0; }
+.u-link-accent { color: #99FF66; font-weight: bold; }
+.u-text-sm { font-size: 0.85rem; }
+.u-heading-sm { margin-bottom: 12px; font-size: 1.2rem; }
+.u-center-auto { margin: 0 auto; }
+.u-lead-left { margin: 0; text-align: left; }
+.u-text-right { text-align: right; }
