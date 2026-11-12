@@ -195,3 +195,9 @@ a:focus-visible {
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
+
+.hydra-note {
+    color: var(--hydra-muted);
+    font-size: 0.9rem;
+    margin: 8px 0 0;
+}

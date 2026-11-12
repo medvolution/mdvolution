@@ -1,0 +1,30 @@
+/* Shared background: same video as the Medvolution site, with a static poster on small screens */
+.site-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    background: #05070a url("../img/bg/medvolution-poster.jpg") center / cover no-repeat;
+    pointer-events: none;
+}
+
+.site-bg video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.site-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+    .site-bg video {
+        display: none;
+    }
+}
