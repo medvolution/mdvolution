@@ -185,3 +185,13 @@ a:focus-visible {
     height: auto;
     margin: 0 auto;
 }
+
+/* Small flag next to language links */
+.nav-flag {
+    width: 24px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
