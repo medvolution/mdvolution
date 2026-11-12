@@ -6,3 +6,9 @@
 .u-center-auto { margin: 0 auto; }
 .u-lead-left { margin: 0; text-align: left; }
 .u-text-right { text-align: right; }
+
+/* Centred lead text; higher specificity than the justified rule in hydra.css */
+.is-justified .u-lead-center {
+    margin: 0;
+    text-align: center;
+}
