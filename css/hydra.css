@@ -203,3 +203,9 @@ a:focus-visible {
     font-size: 0.9rem;
     margin: 8px 0 0;
 }
+
+/* Justified running text on HYDRA and ORION pages only (body.is-justified) */
+.is-justified p {
+    text-align: justify;
+    hyphens: auto;
+}
