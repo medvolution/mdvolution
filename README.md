@@ -16,3 +16,5 @@ Early phase. See the project log for current status.
 ## License
 
 Proprietary. See `LICENSE`.
+
+This repository is publicly visible but is not open source. See `LICENSE` and `THIRD-PARTY-NOTICES.md`.
