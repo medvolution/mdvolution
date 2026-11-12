@@ -556,9 +556,8 @@
         // Función para intentar reproducir el video
         function startVideo() {
             video.play().then(function() {
-                console.log('Video reproduciéndose correctamente');
             }).catch(function(error) {
-                console.log('Auto-reproducción bloqueada:', error);
+                
                 // Esperar interacción del usuario
                 var playOnInteraction = function() {
                     video.play();
