@@ -135,3 +135,14 @@ button:focus-visible {
     height: clamp(28px, 3vw, 44px);
     width: auto;
 }
+
+/* Menu entry with emblem (HYDRA) */
+.navbar .nav-link--brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.navbar .nav-link--brand img {
+    width: 32px;
+    height: auto;
+}

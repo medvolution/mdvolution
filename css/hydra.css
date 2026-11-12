@@ -177,3 +177,11 @@ a:focus-visible {
     height: clamp(28px, 3vw, 36px);
     width: auto;
 }
+
+/* HYDRA logo (mobile-first) */
+.hydra-hero__logo {
+    display: block;
+    width: min(560px, 88vw);
+    height: auto;
+    margin: 0 auto;
+}

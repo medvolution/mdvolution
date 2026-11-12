@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" role="img" aria-labelledby="hydra-logo-title">
+  <title id="hydra-logo-title">HYDRA: Health technologY, Data, Research &amp; Analytics. A Medvolution Initiative</title>
+  <defs>
+    <linearGradient id="hydra-body-l" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14E3D4"/>
+      <stop offset="1" stop-color="#0A5C78"/>
+    </linearGradient>
+    <path id="hydra-head-l" d="M104 58 C140 30 190 34 222 52 C232 58 230 70 220 72 C196 70 176 76 160 86 C140 98 118 92 104 58 Z"/>
+  </defs>
+  <g transform="translate(0 30)">
+    <path d="M40 170 C28 120 58 72 104 66 C122 110 102 140 94 160 C86 176 62 182 40 170 Z" fill="url(#hydra-body-l)"/>
+    <use href="#hydra-head-l" fill="url(#hydra-body-l)"/>
+    <use href="#hydra-head-l" fill="url(#hydra-body-l)" transform="translate(-14 40)"/>
+    <use href="#hydra-head-l" fill="url(#hydra-body-l)" transform="translate(-26 80)"/>
+    <path d="M190 50 L208 46 L193 57 Z" fill="#6FFFF0"/>
+    <path d="M176 90 L194 86 L179 97 Z" fill="#6FFFF0" transform="translate(-14 0)"/>
+    <path d="M164 130 L182 126 L167 137 Z" fill="#6FFFF0" transform="translate(-26 0)"/>
+    <g stroke="#14E3D4" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M40 150 L62 150 L82 140"/>
+      <path d="M52 168 L78 168 L104 156"/>
+      <path d="M126 150 L160 150 L190 140"/>
+    </g>
+    <g fill="#6FFFF0">
+      <circle cx="40" cy="150" r="4"/>
+      <circle cx="52" cy="168" r="4"/>
+      <circle cx="190" cy="140" r="4"/>
+    </g>
+  </g>
+  <text x="270" y="140" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="110" font-weight="300" letter-spacing="14" fill="#F5F5F5">HYDRA</text>
+  <text x="274" y="182" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="22" fill="#5FE8DC">Health technologY, Data, Research &amp; Analytics</text>
+  <text x="274" y="214" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#9FB3B8">A MEDVOLUTION INITIATIVE</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-labelledby="hydra-emblem-title">
+  <title id="hydra-emblem-title">HYDRA emblem</title>
+  <defs>
+    <linearGradient id="hydra-body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14E3D4"/>
+      <stop offset="1" stop-color="#0A5C78"/>
+    </linearGradient>
+    <path id="hydra-head" d="M104 58 C140 30 190 34 222 52 C232 58 230 70 220 72 C196 70 176 76 160 86 C140 98 118 92 104 58 Z"/>
+  </defs>
+  <path d="M40 170 C28 120 58 72 104 66 C122 110 102 140 94 160 C86 176 62 182 40 170 Z" fill="url(#hydra-body)"/>
+  <use href="#hydra-head" fill="url(#hydra-body)"/>
+  <use href="#hydra-head" fill="url(#hydra-body)" transform="translate(-14 40)"/>
+  <use href="#hydra-head" fill="url(#hydra-body)" transform="translate(-26 80)"/>
+  <path d="M190 50 L208 46 L193 57 Z" fill="#6FFFF0"/>
+  <path d="M176 90 L194 86 L179 97 Z" fill="#6FFFF0" transform="translate(-14 0)"/>
+  <path d="M164 130 L182 126 L167 137 Z" fill="#6FFFF0" transform="translate(-26 0)"/>
+  <g stroke="#14E3D4" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M40 150 L62 150 L82 140"/>
+    <path d="M52 168 L78 168 L104 156"/>
+    <path d="M126 150 L160 150 L190 140"/>
+  </g>
+  <g fill="#6FFFF0">
+    <circle cx="40" cy="150" r="4"/>
+    <circle cx="52" cy="168" r="4"/>
+    <circle cx="190" cy="140" r="4"/>
+  </g>
+</svg>
