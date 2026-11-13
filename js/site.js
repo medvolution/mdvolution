@@ -41,6 +41,11 @@
         el.setAttribute('role', 'link');
         el.setAttribute('tabindex', '0');
         var open = function() {
+            // data-target="_self" opens in the same tab; the default is a new tab
+            if (el.getAttribute('data-target') === '_self') {
+                window.location.href = el.getAttribute('data-href');
+                return;
+            }
             window.open(el.getAttribute('data-href'), '_blank', 'noopener,noreferrer');
         };
         el.addEventListener('click', open);
